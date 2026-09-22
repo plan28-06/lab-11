@@ -6,6 +6,7 @@ const PORT = 3000;
 app.get("/status", (req, res) => {
     res.json({
         status: "API is running",
+        environment: process.env.ENVIRONMENT || "unknown",
     });
 });
 
